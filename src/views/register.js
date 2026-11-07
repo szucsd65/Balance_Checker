@@ -2,7 +2,7 @@ import {register} from '../service/auth.js';
 
 export function loadReg() {
     document.querySelector('#app').innerHTML = `
-        <div id="registerContainer>
+        <div id="registerContainer">
             <div id="registerCard">
                 <h1>Kiadások</h1>
                 <h2>Regisztráció</h2>
@@ -31,20 +31,23 @@ export function loadReg() {
     `;
 
     document.querySelector('#registerForm').addEventListener('submit', async (event) => {
+        console.log('Registration button clicked');
         event.preventDefault();
+        console.log('Form submission started');
 
         const name = document.querySelector('#name').value.trim();
         const email = document.querySelector('#email').value.trim();
         const password = document.querySelector('#password').value.trim();
         const confirmPassword = document.querySelector('#confirmPassword').value.trim();
-        const message = document.querySelector('#message').value.trim();
+        const message = document.querySelector('#message');
 
             if (password !== confirmPassword) {
             message.textContent = "A jelszavak nem egyeznek!";
             return;
         }
-
+        message.textContent = 'Regisztráció folyamatban...';
         try {
+            console.log('Calling Supabase...');
             const data = await register(name, email, password);
             if (data.session) {
                 message.textContent = "Sikeres regisztráció!";

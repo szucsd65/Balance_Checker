@@ -1,10 +1,10 @@
 import './style.css';
 
-import { loadLog } from '../views/login.js';
-import { loadReg } from '../views/register.js';
-import { loadPage } from '../views/frontpage.js';
+import { loadLog } from './views/login.js';
+import { loadReg } from './views/register.js';
+import { loadPage} from './views/frontpage.js';
 
-import { getUser, authChangeListener } from '../service/auth.js';
+import { getUser, authChangeListener } from './service/auth.js';
 
 async function navigate() {
   const page = window.location.hash.replace('#', '') || 'login';

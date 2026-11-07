@@ -20,7 +20,7 @@ export function loadLog() {
 
                 <p>
                     Nem rendelkezel fiókkal?
-                    <a href="#register">Bejelentkezés</a>
+                    <a href="#register">Regisztráció</a>
                 </p>
             </div>
         </div>
