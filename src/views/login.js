@@ -1,4 +1,4 @@
-import {login} from '..service/auth.js';
+import {login} from '../service/auth.js';
 
 export function loadLog() {
     document.querySelector('#app').innerHTML = `

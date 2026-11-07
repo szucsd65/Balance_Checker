@@ -1,4 +1,4 @@
-import {register} from '..service/auth.js';
+import {register} from '../service/auth.js';
 
 export function loadReg() {
     document.querySelector('#app').innerHTML = `
