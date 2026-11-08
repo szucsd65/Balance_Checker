@@ -27,7 +27,7 @@ export async function loadPage(user) {
                 <header class="frontPageHeader">
                     <div>
                         <h1>Főoldal</h1>
-                        <p1>Áttekintés</p1>
+                        <p>Áttekintés</p>
                     </div>
                     <div class="userInfo">
                         ${escapeHtml(user.email)}
@@ -125,9 +125,9 @@ async function loadPageData(userId) {
 
     const transactions = data || [];
 
-    const income = transactions.filter(t => t.type === 'bevétel').reduce((sum, t) => sum + Number(t.amount), 0);
+    const income = transactions.filter(t => t.type === 'income').reduce((sum, t) => sum + Number(t.amount), 0);
 
-    const expense = transactions.filter(t => t.type === 'kiadás').reduce((sum, t) => sum + Number(t.amount), 0);
+    const expense = transactions.filter(t => t.type === 'expense').reduce((sum, t) => sum + Number(t.amount), 0);
 
     const balance = income - expense;
 
