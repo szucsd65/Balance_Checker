@@ -14,7 +14,11 @@ export async function getTransactions(userId) {
 }
 
 export async function addTransactions(transaction) {
-    const {data, error} = await supabase.from('transactions').insert(transaction).select().single();
+    const {data, error} = await supabase
+        .from('transactions')
+        .insert(transaction)
+        .select()
+        .single();
 
     if (error) {
         throw error;
@@ -23,12 +27,13 @@ export async function addTransactions(transaction) {
 }
 
 export async function updateTransactions(id, userId, transaction) {
-    const {data, error} = await supabase.from('transactions')
-                .update(transaction)
-                .eq('id', id)
-                .eq('user_id', userId)
-                .select()
-                .single();
+    const {data, error} = await supabase
+        .from('transactions')
+        .update(transaction)
+        .eq('id', id)
+        .eq('user_id', userId)
+        .select()
+        .single();
 
     if (error) {
         throw error;
@@ -37,7 +42,11 @@ export async function updateTransactions(id, userId, transaction) {
 }
 
 export async function deleteTransactions(id, userId) {
-    const {error} = await supabase.from('transactions').delete().eq('id', id).eq('user_id', userId);
+    const {error} = await supabase
+        .from('transactions')
+        .delete()
+        .eq('id', id)
+        .eq('user_id', userId);
 
     if (error) {
         throw error;
