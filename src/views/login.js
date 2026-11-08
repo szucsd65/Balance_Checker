@@ -2,7 +2,7 @@ import {login} from '../service/auth.js';
 
 export function loadLog() {
     document.querySelector('#app').innerHTML = `
-        <div id="authContainer>
+        <div id="authContainer">
             <div id="authCard">
                 <h1>Kiadások</h1>
                 <h2>Bejelentkezés</h2>
@@ -26,12 +26,12 @@ export function loadLog() {
         </div>
     `;
 
-    document.querySelector('#loginForm').addEventListener('sumbit', async (event) => {
+    document.querySelector('#loginForm').addEventListener('submit', async (event) => {
         event.preventDefault();
 
         const email = document.querySelector('#email').value.trim();
         const password = document.querySelector('#password').value.trim();
-        const message = document.querySelector('#message').value.trim();
+        const message = document.querySelector('#message');
 
         try {
             await login(email, password);
