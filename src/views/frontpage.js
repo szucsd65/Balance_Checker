@@ -6,7 +6,7 @@ export async function loadPage(user) {
 
     app.innerHTML = `
         <div class="frontpageLayout">
-            <aside>
+            <aside class="sidebar">
                 <h2>Balance_Checker</h2>
 
                 <nav>

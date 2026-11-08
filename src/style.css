@@ -1,0 +1,77 @@
+.frontpageLayout{
+  min-height: 100%;
+  display: flex;
+  background: rgb(174, 210, 246);
+}
+
+.sidebar{
+  width: 20%;
+  background: rgb(101, 140, 240);
+  color: white;
+  text-decoration: none;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+h2{
+  color: rgb(1, 6, 17);
+  margin-bottom: 20%;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+}
+
+.sidebar nav a{
+  color: rgb(227, 230, 236);
+  text-decoration: none;
+  padding: 1%;
+  border-radius: 8px;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+    background: #0f284f;
+    color: rgb(227, 230, 236);
+}
+
+.logoutBtn{
+  margin-top: auto;
+  padding: 1%;
+  background: rgb(186, 35, 35);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.frontPageMain{
+  flex: 1;
+  padding: 6%;
+  min-width: 0;
+}
+
+.frontPageHeader{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5%;
+  margin-bottom: 6%;
+}
+
+.frontPageHeader h1 {
+  font-size: 28px;
+  margin-top: 2%;
+}
+
+.frontPageHeader p {
+  color: #64748b;
+}
+
+.userInfo{
+  color: rgb(0, 0, 0);
+  overflow-wrap: anywhere;
+}
