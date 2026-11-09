@@ -4,6 +4,7 @@ import { loadLog } from './views/login.js';
 import { loadReg } from './views/register.js';
 import { loadPage} from './views/frontpage.js';
 import { loadTransactions } from './views/transactions.js';
+import { loadCategories } from './views/categories.js';
 
 import { getUser, authChangeListener } from './service/auth.js';
 
@@ -39,9 +40,10 @@ async function navigate() {
         await loadPage(user);
       }
       else if (page === 'transactions') {
-        console.log('Opening transactions page');
         await loadTransactions(user);
-        console.log('Transactions page finished loading');
+      }
+      else if (page === 'categories') {
+        await loadCategories(user);
       }
       else {
         window.location.hash = 'frontpage';
