@@ -47,13 +47,21 @@ export async function updateCategory(id, userId, category) {
 }
 
 export async function deleteCategory(id, userId) {
-    const { error } = await supabase
+    const { data, error } = await supabase
         .from('categories')
         .delete()
         .eq('id', id)
-        .eq('user_id', userId);
+        .eq('user_id', userId)
+        .select()
+        .single();
 
     if (error) {
         throw error;
     }
+
+    if (!data || data.length === 0) {
+        throw new Error("A kategória nem található, vagy nem sikerült törölni.");
+    }
+
+    return data;
 }

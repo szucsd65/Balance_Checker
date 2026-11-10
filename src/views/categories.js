@@ -315,9 +315,9 @@ export async function loadCategories(user) {
             }
 
             try {
-                await deleteCategory(id, user.id);
+                const deletedCategory = await deleteCategory(id, user.id);
 
-                message.textContent = 'Kategória törölve!'
+                message.textContent = `${deletedCategory.name} kategória törölve!`
 
                 await refreshCategories();
             }
