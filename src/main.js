@@ -6,6 +6,7 @@ import { loadPage} from './views/frontpage.js';
 import { loadTransactions } from './views/transactions.js';
 import { loadCategories } from './views/categories.js';
 import { loadBudgets } from './views/budget.js';
+import { loadStatistics } from './views/statistics.js';
 
 import { getUser, authChangeListener } from './service/auth.js';
 
@@ -48,6 +49,9 @@ async function navigate() {
       }
       else if (page === 'categories') {
         await loadCategories(user);
+      }
+      else if (page === 'statistics') {
+        await loadStatistics(user);
       }
       else {
         window.location.hash = 'frontpage';

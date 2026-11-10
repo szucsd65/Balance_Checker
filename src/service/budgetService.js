@@ -80,7 +80,7 @@ export async function deleteBudget(id, userId) {
 }
 
 export async function getCategoryExpenses(userId, month) {
-    const startDate = `${month}T00:00:00`;
+    const startDate = `${month}-01`;
 
     const [year, monthNumber] = month.split("-").map(Number);
     const nextMonth = new Date(year, monthNumber, 1);
@@ -96,7 +96,7 @@ export async function getCategoryExpenses(userId, month) {
         .eq("user_id", userId)
         .eq("type", "expense")
         .gte("transaction_date", startDate.slice(0, 10))
-        .lt("transactions_date", endDate);
+        .lt("transaction_date", endDate);
 
     if (error) {
         throw error;

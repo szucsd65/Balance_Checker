@@ -14,6 +14,8 @@ export async function getCategories(userId) {
 }
 
 export async function addCategory(category) {
+    console.log("INSERT DATA:", category)
+
     const {data, error} = await supabase
         .from('categories')
         .insert(category)
@@ -21,6 +23,7 @@ export async function addCategory(category) {
         .single();
 
     if (error) {
+        console.error("ERROR:", error);
         throw error;
     }
 
