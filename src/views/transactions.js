@@ -26,7 +26,7 @@ export async function loadTransactions(user) {
 
     app.innerHTML = `
         <div class="dashboardLayout">
-            <aside>
+            <aside class="sidebar">
                 <h2>Balance_Checker</h2>
 
                 <nav>
@@ -222,7 +222,7 @@ export async function loadTransactions(user) {
                 </td>
                 <td class="${transaction.type}">
                     ${transaction.type === 'income' ? '+' : '-'}
-                    ${Number(transaction.amount).toFixed(2)}
+                    ${Number(transaction.amount).toFixed(2)} Ft
                 </td>
                 <td>
                     <button

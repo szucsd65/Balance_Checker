@@ -1,4 +1,4 @@
-.frontpageLayout{
+.dashboardLayout{
   min-height: 100%;
   display: flex;
   background: rgb(174, 210, 246);
@@ -48,13 +48,13 @@ h2{
   cursor: pointer;
 }
 
-.frontPageMain{
+.dashboardMain{
   flex: 1;
   padding: 6%;
   min-width: 0;
 }
 
-.frontPageHeader{
+.dashboardHeader{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -62,12 +62,12 @@ h2{
   margin-bottom: 6%;
 }
 
-.frontPageHeader h1 {
+.dashboardHeader h1 {
   font-size: 28px;
   margin-top: 2%;
 }
 
-.frontPageHeader p {
+.dashboardHeader p {
   color: #64748b;
 }
 

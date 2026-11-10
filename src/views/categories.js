@@ -17,7 +17,7 @@ export async function loadCategories(user) {
 
     app.innerHTML = `
         <div class="dashboardLayout">
-            <aside>
+            <aside class="sidebar">
                 <h2>Balance_Checker</h2>
 
                 <nav>

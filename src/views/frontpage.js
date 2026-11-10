@@ -5,7 +5,7 @@ export async function loadPage(user) {
     const app = document.querySelector('#app');
 
     app.innerHTML = `
-        <div class="frontpageLayout">
+        <div class="dashboardLayout">
             <aside class="sidebar">
                 <h2>Balance_Checker</h2>
 
@@ -23,8 +23,8 @@ export async function loadPage(user) {
                 </button>
             </aside>
 
-            <main class="frontPageMain">
-                <header class="frontPageHeader">
+            <main class="dashboardMain">
+                <header class="dashboardHeader">
                     <div>
                         <h1>Főoldal</h1>
                         <p>Áttekintés</p>
