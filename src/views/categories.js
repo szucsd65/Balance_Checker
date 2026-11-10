@@ -18,7 +18,7 @@ export async function loadCategories(user) {
     app.innerHTML = `
         <div class="dashboardLayout">
             <aside class="sidebar">
-                <h2>Balance_Checker</h2>
+                <h2>Kiadáskezelő</h2>
 
                 <nav>
                     <a href="#frontpage">Főoldal</a>
@@ -26,7 +26,6 @@ export async function loadCategories(user) {
                     <a class="active" href="#categories">Kategóriák</a>
                     <a href="#budgets">Költségvetés</a>
                     <a href="#statistics">Statisztikák</a>
-                    <a href="#profile">Profil</a>
                 </nav>
 
                 <button id="logoutBtn" class="logoutBtn">
@@ -40,7 +39,7 @@ export async function loadCategories(user) {
                         <h1>Kategóriák</h1>
                         <p>Kategóriák kezelése</p>
                     </div>
-                    <button id="addCategoriesBtn" class="addCategoriessBtn">
+                    <button id="addCategoriesBtn" class="addCategoriesBtn">
                         Új kategória
                     </button>
                 </header>

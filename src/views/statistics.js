@@ -27,7 +27,6 @@ export async function loadStatistics(user) {
             <header class="statisticsHeader">
                 <div>
                     <h1>Statisztikák</h1>
-                    <p>Tekintsd át a pénzügyeid alakulását.</p>
                 </div>
 
                 <button id="logoutBtn" class="logoutBtn">

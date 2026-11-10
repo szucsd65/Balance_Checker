@@ -68,10 +68,703 @@ h2{
 }
 
 .dashboardHeader p {
-  color: #64748b;
+  color: rgb(100, 116, 139);
 }
 
 .userInfo{
   color: rgb(0, 0, 0);
   overflow-wrap: anywhere;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background: rgb(174, 210, 246);
+    color: black;
+}
+
+#authContainer {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+}
+
+#authCard {
+    background: white;
+    width: 80%;
+    max-width: 100%;
+    padding: 10%;
+    border-radius: 16px;
+}
+
+#authCard h1 {
+    text-align: center;
+    color: black;
+    margin-bottom: 4%;
+}
+
+#authCard h2 {
+    text-align: center;
+    margin-bottom: 4%;
+}
+
+#authCard label {
+    display: block;
+    margin: 4% 0 2%;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#authCard input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 2%;
+    font-size: 12px;
+}
+
+#authCard button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5%;
+    background: rgb(22, 163, 74);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#authCard p {
+    text-align: center;
+    margin-top: 8%;
+    font-size: 14px;
+}
+
+#authCard a {
+    color: rgb(22, 163, 74);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.summaryTable {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 5%;
+    margin-bottom: 14%;
+}
+
+.summaryCard {
+    background: white;
+    padding: 14%;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.summaryCard span {
+    color: rgb(100, 116, 139);
+    font-size: 14px;
+}
+
+.summaryCard h2 {
+    margin-top: 5%;
+    font-size: 24px;
+    overflow-wrap: anywhere;
+}
+
+.transactionsSection {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.sectionHeader {
+    margin-bottom: 10%;
+}
+
+.tableWrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.transactionSection table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.transactionSection th,
+.transactionSection td {
+    padding: 6%;
+    border-bottom: 1px solid rgb(226, 232, 240);
+    white-space: nowrap;
+}
+
+.transactionSection th {
+    color: black;
+    font-size: 13px;
+}
+
+.transactionSection .income {
+    color: rgb(22, 163, 74);
+}
+
+.transactionSection .expense {
+    color: rgb(220, 38, 38);
+}
+
+#dashboardMessage {
+    color: rgb(220, 38, 38);
+    margin-top: 7%;
+}
+
+.primaryBtn {
+    background: rgb(22, 163, 74);
+    color: white;
+    border: none;
+    padding: 1% 9%;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.primaryBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.secondaryBtn {
+    background: #e2e8f0;
+    color: #334155;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.transactionFilter {
+    display: flex;
+    gap: 3%;
+    margin-bottom: 10%;
+}
+
+.transactionFilter input,
+.transactionFilter select {
+    padding: 0.5%;
+    border: 1px solid #e1cbe1;
+    border-radius: 8px;
+    background: white;
+}
+
+.transactionFilter input {
+    flex: 1;
+    min-width: 0;
+}
+
+.editBtn,
+.deleteBtn {
+    padding: 7px 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 2px;
+}
+
+.editBtn {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.deleteBtn {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.addTransactionsBtn {
+    padding: 1% 2%;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 2px;
+}
+
+.budgetsPage {
+    width: 80%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 15%px;
+}
+
+.budgetsHeader,
+.budgetOverviewHeader,
+.budgetCardHeader,
+.budgetCardDetails {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6%;
+}
+
+.budgetsHeader {
+    margin-bottom: 7%;
+}
+
+.budgetsHeader h1 {
+    margin-bottom: 2%;
+}
+
+.budgetFormContainer,
+.budgetOverview {
+    background: rgb(235, 233, 233);
+    padding: 6%;
+    border-radius: 12px;
+    margin-bottom: 12%;
+}
+
+#budgetForm {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6%;
+    align-items: end;
+}
+
+.budgetFormGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+}
+
+.budgetFormGroup input,
+.budgetFormGroup select,
+#overviewMonth {
+    width: 100%;
+    padding: 2%;
+    border: 1px solid rgb(8, 8, 8);
+    border-radius: 3%;
+    font: inherit;
+}
+
+#budgetForm button {
+    min-height: 14%;
+}
+
+.budgetList {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 7%;
+    margin-top: 5%;
+}
+
+
+.budgetCard {
+    border: 1px solid rgb(18, 17, 17);
+    border-radius: 10px;
+    padding: 10%;
+}
+
+.budgetCard h3 {
+    margin: 0 0 3%;
+}
+
+.budgetCard p {
+    margin: 2% 0;
+}
+
+.deleteBudgetBtn {
+    border: none;
+    background: rgb(255, 232, 232);
+    color: rgb(198, 40, 40);
+    padding: 2% 2%;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.budgetProgress {
+    width: 100%;
+    height: 5%;
+    background: rgb(238, 238, 238);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10% 0 5%;
+}
+
+.budgetProgressBar {
+    height: 100%;
+    background: rgb(53, 166, 107);
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+.budgetProgressBar.overBudget {
+    background: rgb(227, 75, 75);
+}
+
+.budgetCardDetails {
+    font-size: 14px;
+    flex-wrap: wrap;
+}
+
+.positiveAmount {
+    color: rgb(37, 131, 78);
+}
+
+.negativeAmount {
+    color: rgb(211, 47, 47);
+}
+
+.budgetPercentage {
+    text-align: right;
+    color: rgb(119, 119, 119);
+    font-size: 13px;
+}
+
+.emptyBudgets {
+    color: rgb(119, 119, 119);
+    padding: 8%px 0;
+}
+
+#budgetFormMessage {
+    margin-top: 7%;
+}
+
+.transaction table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.transaction th,
+.transaction td {
+    padding: 16px;
+    border-bottom: 1px solid rgb(226, 232, 240);
+    white-space: nowrap;
+}
+
+.transaction th {
+    color: black;
+    font-size: 13px;
+}
+
+.transaction .income {
+    color: rgb(22, 163, 74);
+}
+
+.transaction .expense {
+    color: rgb(220, 38, 38);
+}
+
+.categoryGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 5%;
+    margin-bottom: 15%;
+}
+
+.categorySection {
+    background: white;
+    padding: 2%;
+    border-radius: 12px;
+    width: 100%;
+}
+
+.categorySection h2 {
+    font-size: 20px;
+    margin: 0 0 2%;
+    color: rgb(1, 6, 17);
+}
+
+.categoryName {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1e293b;
+    white-space: nowrap;
+}
+
+.categoryDetails {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+.categoryItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 7%;
+    padding: 6%;
+    border-bottom: 1px solid rgb(226, 232, 240);
+}
+
+.categoryItem:last-child {
+    border-bottom: none;
+}
+
+.categoryDetails {
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    min-width: 0;
+}
+
+.categoryColor {
+    width: 8%;
+    height: 6%;
+    min-width: 6%;
+    border-radius: 50%;
+}
+
+.categoryName {
+    font-size: 15px;
+    font-weight: 600;
+    color: rgb(30, 41, 59);
+    overflow-wrap: anywhere;
+}
+
+.categoryActions {
+    display: flex;
+    gap: 4%;
+    flex-shrink: 0;
+}
+
+.editCategoryBtn,
+.deleteCategoryBtn {
+    padding: 4% 6%;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.editCategoryBtn {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.editCategoryBtn:hover {
+    background: #bfdbfe;
+}
+
+.deleteCategoryBtn {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.deleteCategoryBtn:hover {
+    background: #fecaca;
+}
+
+.emptyCategories {
+    color: rgb(119, 119, 119);
+    font-size: 14px;
+    padding: 7% 0;
+}
+
+.addCategoriesBtn {
+    padding: 1% 2%;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 2px;
+}
+
+.statisticsPage {
+    width: 100%;
+}
+
+.statisticsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2%;
+    margin-bottom: 8%;
+}
+
+.statisticsHeader h1 {
+    font-size: 28px;
+    margin: 0 0 2%;
+    color: rgb(1, 6, 17);
+}
+
+.statisticsHeader p {
+    color: rgb(100, 116, 139);
+    margin: 0;
+}
+
+.statisticsFilter {
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    color: black;
+    padding: 6%;
+    border-radius: 12px;
+    margin-bottom: 8%;
+}
+
+.statisticsFilter label {
+    font-weight: 600;
+    color: rgb(51, 65, 85);
+}
+
+.statisticsFilter input {
+    padding: 1% 2%;
+    border: 1px solid rgb(203, 213, 225);
+    border-radius: 8px;
+    font: inherit;
+    background: white;
+}
+
+.statisticsSummary {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 4%;
+    margin-bottom: 10%;
+}
+
+.statisticsCard {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.statisticsCard h3 {
+    color: rgb(100, 116, 139);
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 0 15px;
+}
+
+.statisticsCard p {
+    color: rgb(15, 23, 42);
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.statisticsCard .positiveAmount {
+    color: rgb(22, 163, 74);
+}
+
+.statisticsCard .negativeAmount {
+    color: rgb(220, 38, 38);
+}
+
+.statisticsCharts {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8%;
+    margin-bottom: 8%;
+}
+
+.statisticsChartCard {
+    background: white;
+    padding: 8%;
+    border-radius: 12px;
+    min-width: 0;
+}
+
+.statisticsChartCard h2 {
+    color: rgb(1, 6, 17);
+    font-size: 19px;
+    margin: 0 0 8%;
+}
+
+.chartContainer {
+    position: relative;
+    width: 100%;
+    height: 320px;
+}
+
+#registerContainer {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8% 3%;
+    background: rgb(174, 210, 246);
+}
+
+#registerCard {
+    background: white;
+    width: 100%;
+    max-width: 100%;
+    padding: 8%;
+    border-radius: 16px;
+}
+
+#registerCard h1 {
+    text-align: center;
+    color: rgb(1, 6, 17);
+    font-size: 28px;
+    margin-bottom: 3%;
+}
+
+#registerCard h2 {
+    text-align: center;
+    color: rgb(100, 116, 139);
+    font-size: 21px;
+    margin-bottom: 5%;
+}
+
+#registerForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#registerForm label {
+    display: block;
+    margin: 1% 0 2%;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(51, 65, 85);
+}
+
+#registerForm input {
+    width: 100%;
+    padding: 1%;
+    border: 1px solid rgb(203, 213, 225);
+    border-radius: 8px;
+    font-size: 14px;
+    background: white;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+}
+
+#registerForm input:focus {
+    outline: none;
+    border-color: rgb(101, 140, 240);
+}
+
+#registerForm input::placeholder {
+    color: rgb(148, 163, 184);
+}
+
+#registerForm button {
+    width: 100%;
+    padding: 1%;
+    margin-top: 2%;
+    background: rgb(22, 163, 74);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+#registerCard > p {
+    text-align: center;
+    margin-top: 5%;
+    font-size: 14px;
+    color: rgb(71, 85, 105);
+}
+
+#registerCard a {
+    color: rgb(22, 163, 74);
+    text-decoration: none;
+    font-weight: 600;
 }

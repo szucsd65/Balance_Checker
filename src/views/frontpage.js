@@ -7,7 +7,7 @@ export async function loadPage(user) {
     app.innerHTML = `
         <div class="dashboardLayout">
             <aside class="sidebar">
-                <h2>Balance_Checker</h2>
+                <h2>Kiadáskezelő</h2>
 
                 <nav>
                     <a class="active" href="#frontpage">Főoldal</a>
@@ -15,7 +15,6 @@ export async function loadPage(user) {
                     <a href="#categories">Kategóriák</a>
                     <a href="#budgets">Költségvetés</a>
                     <a href="#statistics">Statisztikák</a>
-                    <a href="#profile">Profil</a>
                 </nav>
 
                 <button id="logoutBtn" class="logoutBtn">
@@ -40,12 +39,12 @@ export async function loadPage(user) {
                         <h2 id="balance"></h2>
                     </div>
 
-                    <div class="summaryCardIncome">
+                    <div class="summaryCard">
                         <span>Havi bevétel</span>
                         <h2 id="income"></h2>
                     </div>
 
-                    <div class="summaryCardExpense">
+                    <div class="summaryCard">
                         <span>Havi kiadás</span>
                         <h2 id="expense"></h2>
                     </div>

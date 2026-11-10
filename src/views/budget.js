@@ -41,7 +41,6 @@ export async function loadBudgets(user) {
             <header class="budgetsHeader">
                 <div>
                     <h1>Költségkeretek</h1>
-                    <p>Kövesd nyomon a havi kiadásaidat.</p>
                 </div>
 
                 <button id="logoutBtn" class="logoutBtn">

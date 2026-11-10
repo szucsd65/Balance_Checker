@@ -27,7 +27,7 @@ export async function loadTransactions(user) {
     app.innerHTML = `
         <div class="dashboardLayout">
             <aside class="sidebar">
-                <h2>Balance_Checker</h2>
+                <h2>Kiadáskezelő</h2>
 
                 <nav>
                     <a href="#frontpage">Főoldal</a>
@@ -35,7 +35,6 @@ export async function loadTransactions(user) {
                     <a href="#categories">Kategóriák</a>
                     <a href="#budgets">Költségvetés</a>
                     <a href="#statistics">Statisztikák</a>
-                    <a href="#profile">Profil</a>
                 </nav>
 
                 <button id="logoutBtn" class="logoutBtn">

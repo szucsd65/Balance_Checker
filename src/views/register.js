@@ -4,7 +4,7 @@ export function loadReg() {
     document.querySelector('#app').innerHTML = `
         <div id="registerContainer">
             <div id="registerCard">
-                <h1>Kiadások</h1>
+                <h1>Kiadáskezelő</h1>
                 <h2>Regisztráció</h2>
 
                 <form id="registerForm">
